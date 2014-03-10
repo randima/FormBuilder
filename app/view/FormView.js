@@ -1,23 +1,36 @@
-Ext.define('FormBuilder.view.FormView',{
-    extend:'Ext.NavigationView',
-    xtype:'formview',
-    config:{
-        title:'Forms',
-        iconCls:'home',
-        navigationBar:{
-            items:[
-                {
-                    xtype:'button',
-                    text:'test',
-                    align:'right'
-                }
-            ]
-        },
-        items:[
+﻿Ext.define('FormBuilder.view.FormView', {    
+    extend: 'Ext.form.Panel',
+    xtype: 'formview',
+    config: {
+        layout: 'vbox',
+        title: 'Form',
+        items: [
             {
-                xtype:'forms'
+                xtype:'detailscard'
+            },
+            {
+                xtype: 'fieldset',
+                //title: 'Patient',
+                items: [
+                {
+                    xtype: 'textfield',
+                    name : 'familyname',
+                    label: 'Faimily Name'
+                },
+                {
+                    xtype: 'textfield',
+                    name : 'givenname',
+                    label: 'Given Name'
+                },
+                {
+                    xtype: 'textfield',
+                    label: 'birthday',
+                    component: { type: 'date' }
+                }
+                    
+                
+                ]
             }
         ]
-
     }
 });

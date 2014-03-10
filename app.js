@@ -18,14 +18,17 @@ Ext.application({
         'Ext.data.reader.Xml'
     ],
 
-    models:['Form','Link'],
+    models:['Form','Link','FormDetails'],
     stores:['Forms'],
     controllers:['Form'],
     views: [
-        'Main',
+        'FormContainer',
+        'FormList',
         'FormView',
-        'Forms',
-        'Details'
+        'DetailsCard',
+        
+        'Main',
+        'Info'
     ],
 
     icon: {

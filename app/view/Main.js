@@ -5,7 +5,10 @@ Ext.define('FormBuilder.view.Main', {
         tabBarPosition: 'bottom',
         items: [
             {
-                xtype:'formview'
+                xtype:'formcontainer'
+            },
+            {
+                xtype:'info'
             }
         ]
     }

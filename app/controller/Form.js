@@ -2,9 +2,10 @@ Ext.define('FormBuilder.controller.Form',{
     extend:'Ext.app.Controller',
     config:{
         refs:{
-            formView:'formview',
-            forms:'forms',
-            detailsView:'details'
+            formContainer:'formcontainer',
+            formList:'formlist',
+            detailsView: 'details',
+            formView:'formview'
            //testbtn:'formlist button'
         },
         control:{
@@ -14,7 +15,7 @@ Ext.define('FormBuilder.controller.Form',{
 //                    this.getFormsView().test();
 //                }
 //            }
-            forms:{
+            formList:{
                 disclose:function(list,record,index,e,eopt){
                     this.showDetails(record);
                 }
@@ -24,12 +25,19 @@ Ext.define('FormBuilder.controller.Form',{
     },
 
     showDetails:function(record){
-        var detailsView=this.getDetailsView();
-        if(detailsView===undefined){
-            detailsView=Ext.create('FormBuilder.view.Details');
+        var formView=this.getFormView();
+        if(formView===undefined){
+            formView = Ext.create('FormBuilder.view.FormView');
         }
-        detailsView.setData(record.links().first().data);
-        this.getFormView().push(detailsView);
+        var tmp = Ext.create('FormBuilder.model.FormDetails', {
+            name: record.get('display'),
+            description: record.get('display')+'- first version',
+            version:'4.1'
+        });
+        
+        //record.links().first().data //gives next uri
+        formView.getComponent(0).setData(tmp.data);
+        this.getFormContainer().push(formView);
 
     }
 });
