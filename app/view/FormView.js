@@ -1,0 +1,23 @@
+Ext.define('FormBuilder.view.FormView',{
+    extend:'Ext.NavigationView',
+    xtype:'formview',
+    config:{
+        title:'Forms',
+        iconCls:'home',
+        navigationBar:{
+            items:[
+                {
+                    xtype:'button',
+                    text:'test',
+                    align:'right'
+                }
+            ]
+        },
+        items:[
+            {
+                xtype:'forms'
+            }
+        ]
+
+    }
+});

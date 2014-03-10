@@ -1,0 +1,10 @@
+Ext.define('FormBuilder.model.Link',{
+    extend:'Ext.data.Model',
+    config:{
+        fields:[
+            {name:'uri',type:'string'},
+            {name:'rel',type:'string'}
+        ],
+        belongsTo:{model:'FormBuilder.model.Form'}
+    }
+});
