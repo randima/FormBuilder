@@ -5,7 +5,7 @@ Ext.define('FormBuilder.view.Info',{
         title: 'Info',
         iconCls: 'info',
         styleHtmlContent: true,
-        html: 'This is just a demo which fetch json data from a local file.',
+        html: 'This is just a demo which load form data over rest and display details.',
         style:'text-align:center',
         items: [
          {

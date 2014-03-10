@@ -5,6 +5,6 @@ Ext.define('FormBuilder.model.Link',{
             {name:'uri',type:'string'},
             {name:'rel',type:'string'}
         ],
-        belongsTo:{model:'FormBuilder.model.Form'}
+        belongsTo:{model:'FormBuilder.model.Reference'}
     }
 });

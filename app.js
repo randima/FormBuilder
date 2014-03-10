@@ -18,8 +18,8 @@ Ext.application({
         'Ext.data.reader.Xml'
     ],
 
-    models:['Form','Link','FormDetails'],
-    stores:['Forms'],
+    models:['Reference','Link','FormDetails'],
+    stores:['FormsList','Fields'],
     controllers:['Form'],
     views: [
         'FormContainer',

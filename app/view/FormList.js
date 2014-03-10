@@ -3,7 +3,7 @@ Ext.define('FormBuilder.view.FormList',{
     xtype:'formlist',
     config:{
         title:'Available Forms',
-        store:'Forms',
+        store:'FormsList',
         loadingText:'Loading data...',
         emptyText:'No forms Found',
         onItemDisclosure:true,
@@ -30,10 +30,5 @@ Ext.define('FormBuilder.view.FormList',{
      */
     onStoreLoad:function(cmp, records, successful, operation, eOpts){
         console.log("list loaded");
-        console.log(records);
-        records[0].links().each(function(link){
-            console.log(link);
-        });
-
     }
 });
