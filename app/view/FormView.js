@@ -7,7 +7,7 @@
         count:0,
         items: [
             {
-                xtype:'detailscard'
+                xtype: 'detailscard',
             },
             {
                 xtype: 'fieldset'

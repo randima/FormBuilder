@@ -1,13 +1,22 @@
 // The following two lines import the default Sencha Touch theme. If you are building
 // a new theme, remove them and the add your own CSS on top of the base CSS (which
 // is already included in your app.json file).
+
+$body-bg-color: #fbf5e6;
+$base-color: #333;
+$base-gradient: 'glossy';
+
 @import 'sencha-touch/default';
 @import 'sencha-touch/default/all';
+
+//@import 'sencha-touch/mountainview';
+//@import 'sencha-touch/mountainview/all';
 
 // Custom code goes here..
 
 // Examples of using the icon mixin:
 // @include icon('user');
+
 
 .form-details{
 
@@ -77,4 +86,73 @@
 			line-height: 1.2;
 			color: #333;
 			font-size: .7em;
+}
+
+.mainview-info{
+	background: black !important;
+	background-color: black;
+}
+
+.main-info-html{
+	text-align:center;
+	font-size: 22px;
+	font-family: cursive;
+	color:white;
+}
+
+.mainview-panel{
+	background:rgb(54, 52, 52);
+}
+
+
+.viewport-inner {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.slidingmenu {
+  background: #1d1d1d;
+}
+
+.slidingmenu .divider {
+  font-size: 0.7em;
+  color: #a3a3a3;
+  padding: 0.2em 1em;
+  border-bottom: 1px solid #161616;
+  background: #1d1d1d;
+}
+
+.x-button-slidingmenu, .x-button-login {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  background-image: none;
+  background-color: #262626;
+  border-top: 1px solid #313131;
+  border-bottom: 1px solid #161616;
+  border-width: 1px 0;
+  height: 3em;
+}
+
+.x-button-slidingmenu, .x-button-slidingmenu .x-button-label, .x-button-slidingmenu .x-badge, .x-button-login, .x-button-login .x-button-label, .x-button-login .x-badge {
+  color: #FFF;
+  text-align: left;
+}
+
+.x-button-slidingmenu.x-button-pressing, .x-button-login.x-button-pressing {
+  background-color: #000;
+  background-image: none;
+}
+
+.x-button-slidingmenu.x-button-pressing, .x-button-slidingmenu.x-button-pressing .x-button-label, .x-button-slidingmenu.x-button-pressing .x-badge, .x-button-login.x-button-pressing, .x-button-login.x-button-pressing .x-button-label, .x-button-login.x-button-pressing .x-badge {
+  color: #888;
 }

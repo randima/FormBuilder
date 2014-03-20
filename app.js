@@ -20,14 +20,20 @@ Ext.application({
 
     models:['Reference','Link','FormDetails'],
     stores:['FormsList','Fields'],
-    controllers:['Form'],
+    controllers:['Search','MainMenu'],
     views: [
         'FormContainer',
         'FormList',
         'FormView',
         'DetailsCard',
         
+        'search.SearchView',
+        'search.SlidingMenu',
+        
+        'create.CreateView',
+        
         'Main',
+        'MainMenu',
         'Info'
     ],
 
@@ -54,7 +60,7 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('FormBuilder.view.Main'));
+        Ext.Viewport.add(Ext.create('FormBuilder.view.MainMenu'));
     },
 
     onUpdated: function() {

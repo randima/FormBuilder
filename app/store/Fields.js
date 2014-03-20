@@ -5,7 +5,7 @@
         //autoLoad: true,
         proxy: {
             type: 'ajax',
-            url: 'http://localhost:8081/openmrs-standalone/ws/rest/v1/form/c05295a0-1691-11df-97a5-7038c432aabf',
+            url: 'https://api.raxa.io/ws/rest/v1/form/c05295a0-1691-11df-97a5-7038c432aabf',
             reader: {
                 type: 'json',
                 rootProperty: 'formFields'

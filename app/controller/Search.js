@@ -1,4 +1,4 @@
-Ext.define('FormBuilder.controller.Form',{
+Ext.define('FormBuilder.controller.Search',{
     extend:'Ext.app.Controller',
     config:{
         refs:{
@@ -11,10 +11,44 @@ Ext.define('FormBuilder.controller.Form',{
             formList:{
                 disclose:function(list,record,index,e,eopt){
                     this.showDetails(record);
+                    this.hideHomeBtn();
+                    this.hideSearchBtn();
+                }
+            },
+            formContainer: {
+                back:function() {
+                    this.showHomeBtn();
+                    this.showSearchBtn();
                 }
             }
         }
 
+    },
+    
+    hideHomeBtn:function() {
+        var formContainer = this.getFormContainer();
+        console.log(formContainer);
+        formContainer.getComponent(1).getComponent(0).hide();
+    },
+    
+    showHomeBtn:function() {
+        var formContainer = this.getFormContainer();
+        console.log(formContainer);
+        formContainer.getComponent(1).getComponent(0).show();
+    },
+    
+    hideSearchBtn:function() {
+        var formContainer = this.getFormContainer();
+        var nav = formContainer.getNavigationBar();
+        console.log(nav.getComponent(0));
+        nav.getComponent(0).getComponent(1).hide();
+    },
+    
+    showSearchBtn: function () {
+        var formContainer = this.getFormContainer();
+        var nav = formContainer.getNavigationBar();
+        console.log(nav.getComponent(0));
+        nav.getComponent(0).getComponent(1).show();
     },
 
     showDetails:function(record){
@@ -70,7 +104,7 @@ Ext.define('FormBuilder.controller.Form',{
     },
     
     getURL:function(uri) {
-        return uri.replace("NEED-TO-CONFIGURE", "http://localhost:8081/openmrs-standalone");
+        return uri.replace("NEED-TO-CONFIGURE", "https://api.raxa.io");
     },
     
     getFields: function (data) {

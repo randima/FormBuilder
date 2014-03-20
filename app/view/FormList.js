@@ -2,7 +2,6 @@ Ext.define('FormBuilder.view.FormList',{
     extend:'Ext.List',
     xtype:'formlist',
     config:{
-        title:'Available Forms',
         store:'FormsList',
         loadingText:'Loading data...',
         emptyText:'No forms Found',

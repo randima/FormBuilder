@@ -6,7 +6,7 @@ Ext.define('FormBuilder.store.FormsList',{
         proxy:{
             type:'ajax',
             //url:'data.json',
-            url: 'http://localhost:8081/openmrs-standalone/ws/rest/v1/form',
+            url: 'https://api.raxa.io/ws/rest/v1/form',
             reader:{
                 type:'json',
                 rootProperty:'results'
